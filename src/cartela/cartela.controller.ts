@@ -49,12 +49,15 @@ create(@Body() criarCartelaDto: CriarCartelaDto){
     if(criarCartelaDto.cartela === 0){
       criarCartelaDto.cartela = 1
       criarCartelaDto.numerosDaCartela = cartela1.toString();
-    }else if(criarCartelaDto.cartela > 1 && criarCartelaDto.cartela == 2){
-      criarCartelaDto.numerosDaCartela = `${cartela1.toString()} ${cartela2.toString()}`;
-   }else if(criarCartelaDto.cartela > 2 && criarCartelaDto.cartela == 3){
-    criarCartelaDto.numerosDaCartela = `${cartela1.toString()} ${cartela2.toString()} ${cartela3.toString()}`;
-   }else if(criarCartelaDto.cartela > 3 && criarCartelaDto.cartela == 4){
-    criarCartelaDto.numerosDaCartela = `${cartela1.toString()} ${cartela2.toString()} ${cartela3.toString()} ${cartela4.toString()}`;
+    }if(criarCartelaDto.cartela === 1){
+      criarCartelaDto.cartela = 1
+      criarCartelaDto.numerosDaCartela = cartela1.toString();
+    }else if(criarCartelaDto.cartela === 2){
+      criarCartelaDto.numerosDaCartela = `[${cartela1.toString()}] , [${cartela2.toString()}]`;
+   }else if(criarCartelaDto.cartela === 3){
+    criarCartelaDto.numerosDaCartela = `[${cartela1.toString()}] , [${cartela2.toString()}] , [${cartela3.toString()}]`;
+   }else if(criarCartelaDto.cartela === 4){
+    criarCartelaDto.numerosDaCartela = `[${cartela1.toString()}] , [${cartela2.toString()}] , [${cartela3.toString()}] , [${cartela4.toString()}]`;
    }else if(criarCartelaDto.cartela > 4){
     return msg;
    }
@@ -64,10 +67,5 @@ numberRandon(1,60);
 return this.cartelaService.create(criarCartelaDto);
 
 }
-
-
-
-
-
 
 }
