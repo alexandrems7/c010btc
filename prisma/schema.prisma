@@ -9,3 +9,19 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Bola {
+  id        String   @id @default(uuid())
+  bola      String[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Cartela {
+  id               String   @id @default(uuid())
+  cartela          Int
+  numerosDaCartela String[]
+  imagem           String
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
