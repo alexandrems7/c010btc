@@ -31,5 +31,4 @@ export class BolaController {
     return this.bolaService.create(criarBolaDto);
   }
   
-
 }
