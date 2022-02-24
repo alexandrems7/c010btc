@@ -1,0 +1,21 @@
+-- CreateTable
+CREATE TABLE "Bola" (
+    "id" TEXT NOT NULL,
+    "bola" TEXT[],
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "Bola_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "Cartela" (
+    "id" TEXT NOT NULL,
+    "cartela" INTEGER NOT NULL,
+    "numerosDaCartela" TEXT[],
+    "imagem" TEXT NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "Cartela_pkey" PRIMARY KEY ("id")
+);

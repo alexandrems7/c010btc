@@ -17,12 +17,13 @@ async function bootstrap() {
     .setDescription('Bingo Pipa Studios')
     .setVersion('1.0')
     .addTag('Bingo')
-    .addBearerAuth()
+    //.addBearerAuth()
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
 
+  //await app.listen(3001);
   await app.listen(process.env.PORT || 3001);
 }
 bootstrap();
