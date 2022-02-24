@@ -49,6 +49,9 @@ create(@Body() criarCartelaDto: CriarCartelaDto){
     if(criarCartelaDto.cartela === 0){
       criarCartelaDto.cartela = 1
       criarCartelaDto.numerosDaCartela = cartela1.toString();
+    }else if(criarCartelaDto.cartela === 1){
+      criarCartelaDto.cartela = 1
+      criarCartelaDto.numerosDaCartela = cartela1.toString();
     }else if(criarCartelaDto.cartela > 1 && criarCartelaDto.cartela == 2){
       criarCartelaDto.numerosDaCartela = `${cartela1.toString()} ${cartela2.toString()}`;
    }else if(criarCartelaDto.cartela > 2 && criarCartelaDto.cartela == 3){

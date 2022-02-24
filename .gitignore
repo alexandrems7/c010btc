@@ -3,6 +3,9 @@
 /node_modules
 /.env
 
+### dotenv ###
+.env
+
 # Logs
 logs
 *.log
