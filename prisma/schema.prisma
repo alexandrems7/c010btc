@@ -19,7 +19,7 @@ model Bola {
 
 model Cartela {
   id               String   @id @default(uuid())
-  cartela          Int
+  cartela          Int      @default(autoincrement())
   numerosDaCartela String[]
   imagem           String
   createdAt        DateTime @default(now())

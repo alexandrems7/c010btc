@@ -11,8 +11,8 @@ CREATE TABLE "Bola" (
 -- CreateTable
 CREATE TABLE "Cartela" (
     "id" TEXT NOT NULL,
-    "cartela" INTEGER NOT NULL,
-    "numerosDaCartela" TEXT[],
+    "cartela" SERIAL NOT NULL,
+    "numerosDaCartela" TEXT NOT NULL,
     "imagem" TEXT NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
